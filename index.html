@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>hamburger menu</title>
+	<style>
+
+		#hamnav{
+			width: 100%;
+			background-color: black;
+		}
+		#hamnav label, #hamburger {display: none;}
+
+		#hamitems{
+			display: flex;
+		}
+		#hamitems a {
+			padding: 10px;
+			color: #fff;
+			text-decoration: none;
+			text-align: center;
+			flex-grow: 1;
+			flex-basis: 0;
+		}
+#hamitems a:hover {
+	background: #8a0000;
+}
+@media screen and (max-width: 768px) {
+	#hamitems{
+		display: block;
+	}
+	#hamitems a{
+		width: 100%;
+		display: block;
+		box-sizing: border-box;
+		border-top: 1px solid #333;
+	}
+	#hamnav label{
+		display: inline-block;
+		color: #fff;
+		background: #8a0000;
+		font-size: 1.2rem;
+		font-style: normal;
+		padding: 10px;
+	}
+	#hamitems{
+		display: none;
+	}
+	#hamnav input:checked ~ #hamitems {
+		display: block;
+	}
+
+}
+	</style>
+</head>
+<body>
+	<!--hamburger menu-->
+<nav id="hamnav">
+	<!--hamburger icon-->
+<label for="hamburger">&#9776;</label>
+<input type="checkbox" id="hamburger"/>
+
+<!--menu items-->
+<div id="hamitems">
+	<a href="a.html">First</a>
+	<a href="b.html">second</a>
+	<a href="c.html">third</a>
+	<a href="d.html">fourth</a>	
+</div>
+
+
+</nav>
+</body>
+</html>
